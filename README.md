@@ -1,61 +1,37 @@
-# 🚀 Getting started with Strapi
+# GenLatam: Backend API & CMS (Headless)
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+Este repositorio contiene el "Cerebro" del ecosistema GenLatam. Es un servidor backend moderno construido sobre **Strapi v4**, cuya función exclusiva es servir como un Panel de Administración intuitivo para el equipo editorial y proporcionar una API rápida para múltiples interfaces frontend (Arquitectura Multi-Tenant).
 
-### `develop`
+## 🧠 ¿Por qué usamos esta arquitectura?
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+Para garantizar que el equipo de administradores y activistas pueda publicar contenido de forma rápida, segura y sin tocar código.
+A diferencia de sistemas monolíticos antiguos (como WordPress), separar el Backend permite:
+*   **Velocidad**: Las webs frontend pueden consumir los datos en fracciones de segundo.
+*   **Seguridad**: Si una de las webs públicas recibe miles de visitas de golpe (DDoS o picos virales), la base de datos no se cae, porque viven en servidores distintos.
+*   **Ecosistema**: Este mismo backend está diseñado para nutrir simultáneamente a **GenLatam**, a **Guarimba Digital** y a **EXIT** bajo el mismo panel de control, aunque cada uno de estos proyectos viva en dominios `.com` separados.
 
-```
-npm run develop
-# or
-yarn develop
-```
+## 📦 Tecnologías Core
+*   **Strapi v4**: Framework Node.js Headless CMS.
+*   **SQLite / PostgreSQL**: Base de datos de producción (Configurable en el `.env`).
+*   **API REST**: Expone endpoints automáticamente y bajo autenticación.
 
-### `start`
+## 🛠 Estructura de Datos Abierta
+El equipo que ingresa a `miservidor.com/admin` se encuentra con un panel humanizado dividido lógicamente en:
+* `⚙️ Config. Global`
+* `💻 Página: Inicio`
+* `💻 Página: Servicios`
+* `📂 Casos de Éxito`
+* `🎙️ Espacio: Guarimba`
+* `🎙️ Espacio: EXIT`
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
+## 🚀 Cómo correrlo localmente
+Asegúrate de tener Node.js (v18 recomendada) instalado.
 
-```
-npm run start
-# or
-yarn start
-```
+1. Instala las dependencias:
+   `npm install`
+2. Construye el panel inicial:
+   `npm run build`
+3. Arranca el entorno de desarrollo:
+   `npm run develop`
 
-### `build`
-
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
-
-```
-npm run build
-# or
-yarn build
-```
-
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
-```
-yarn strapi deploy
-```
-
-## 📚 Learn more
-
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
-
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
-
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+*(Por defecto, Strapi revelará en tu consola la dirección IP local de tu máquina para que puedas ingresar al panel tanto desde tu PC como desde tu teléfono celular).*

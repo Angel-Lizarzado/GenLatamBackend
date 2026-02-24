@@ -1,0 +1,39 @@
+{
+    "collectionName": "components_shared_servicio_destacados",
+    "info": {
+        "displayName": "Servicio Destacado",
+        "icon": "star",
+        "description": "Tarjeta de capacidad o servicio para la página de inicio"
+    },
+    "options": {},
+    "attributes": {
+        "titulo": {
+            "type": "string",
+            "required": true
+        },
+        "descripcion": {
+            "type": "text",
+            "required": true
+        },
+        "icono": {
+            "type": "enumeration",
+            "enum": [
+                "Presentation",
+                "Globe",
+                "BarChart3",
+                "Activity",
+                "Zap",
+                "Shield",
+                "Smartphone",
+                "Megaphone",
+                "Star",
+                "Users",
+                "TrendingUp",
+                "Target"
+            ],
+            "default": "Presentation",
+            "required": true,
+            "description": "Selecciona un ícono predefinido"
+        }
+    }
+}

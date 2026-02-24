@@ -1,0 +1,67 @@
+{
+    "kind": "singleType",
+    "collectionName": "hub_comunidads",
+    "info": {
+        "singularName": "hub-comunidad",
+        "pluralName": "hub-comunidads",
+        "displayName": "4. 🎙️ Espacio: Guarimba",
+        "description": "Contenido para el portal de Guarimba Digital"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "tituloPrincipal": {
+            "type": "string",
+            "required": true,
+            "default": "La Resistencia Avanza"
+        },
+        "mensajeComunidad": {
+            "type": "text",
+            "required": true
+        },
+        "youtubeChannelId": {
+            "type": "string",
+            "required": true,
+            "description": "El ID del canal de YouTube de Guarimba (necesario para fetch de directos y últimos videos)"
+        },
+        "redesComunidad": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.enlace-social",
+            "description": "Enlaces a las Frecuencias Aliadas o Redes Sociales propias de Guarimba"
+        },
+        "mostrarBotonApoyo": {
+            "type": "boolean",
+            "default": true
+        },
+        "textoBotonApoyo": {
+            "type": "string",
+            "default": "Apoyar Causa"
+        },
+        "linkBotonApoyo": {
+            "type": "string"
+        },
+        "perfilesPresentadores": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.perfil-presentador",
+            "description": "Añade aquí los perfiles de los conductores (ej. Gastón, Marfilipo)"
+        },
+        "logo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "invitadoEspecial": {
+            "type": "component",
+            "repeatable": false,
+            "component": "shared.perfil-presentador",
+            "description": "Información adicional en caso de haber un invitado especial en la comunidad"
+        }
+    }
+}

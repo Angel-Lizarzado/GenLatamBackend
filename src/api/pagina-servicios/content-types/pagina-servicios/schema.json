@@ -1,0 +1,64 @@
+{
+    "kind": "singleType",
+    "collectionName": "pagina_servicios",
+    "info": {
+        "singularName": "pagina-servicios",
+        "pluralName": "paginas-servicios",
+        "displayName": "3. 💻 Página: Servicios",
+        "description": "Contenido estático de la ventana /servicios"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "etiquetaHero": {
+            "type": "string",
+            "required": true,
+            "default": "Experiencia B2B",
+            "description": "El badge pequeño sobre el título del hero (ej. Experiencia B2B)."
+        },
+        "tituloHero": {
+            "type": "string",
+            "required": true,
+            "default": "Consultoría Estratégica & Medios",
+            "description": "El título H1 del hero."
+        },
+        "subtituloHero": {
+            "type": "text",
+            "required": true,
+            "default": "Soluciones especializadas para corporaciones, figuras públicas y marcas que buscan dominar su nicho de mercado con autoridad narrativa.",
+            "description": "El párrafo descriptivo debajo del título."
+        },
+        "servicios": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.servicio-destacado",
+            "description": "Agrega y administra los bloques de servicios. Reutiliza el componente ya existente de GenLatam."
+        },
+        "tituloCta": {
+            "type": "string",
+            "required": true,
+            "default": "¿Un caso especial de Alta Complejidad?",
+            "description": "El título de la sección inferior de llamado de atención (CTA)."
+        },
+        "descripcionCta": {
+            "type": "text",
+            "required": true,
+            "default": "Evaluamos proyectos de gran escala, crisis mediática y estrategias de penetración de mercado a nivel Latam.",
+            "description": "La descripción del bloque CTA."
+        },
+        "textoBotonCta": {
+            "type": "string",
+            "required": true,
+            "default": "Hablar con un Socio",
+            "description": "El texto del botón interior del bloque CTA."
+        },
+        "urlBotonCta": {
+            "type": "string",
+            "required": true,
+            "default": "/contacto",
+            "description": "Enlace del botón del bloque CTA."
+        }
+    }
+}

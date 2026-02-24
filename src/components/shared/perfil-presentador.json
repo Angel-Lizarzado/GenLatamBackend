@@ -1,0 +1,41 @@
+{
+    "collectionName": "components_shared_perfil_presentadors",
+    "info": {
+        "displayName": "Perfil Presentador",
+        "description": "Componente para mostrar el perfil y redes de un host o presentador de la plataforma"
+    },
+    "options": {},
+    "attributes": {
+        "nombre": {
+            "type": "string",
+            "required": true,
+            "description": "Nombre del presentador (ej. Marfilipo)"
+        },
+        "rol": {
+            "type": "string",
+            "required": true,
+            "description": "Título o rol del presentador (ej. Host Principal, Periodista de Investigación)"
+        },
+        "bio": {
+            "type": "text",
+            "description": "Breve biografía o frase destacada del presentador"
+        },
+        "fotoPerfil": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ],
+            "description": "Fotografía retrato del presentador"
+        },
+        "enlaceX": {
+            "type": "string",
+            "description": "Enlace a su cuenta de X / Twitter"
+        },
+        "enlaceInstagram": {
+            "type": "string",
+            "description": "Enlace a su cuenta de Instagram"
+        }
+    }
+}

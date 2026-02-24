@@ -1,0 +1,24 @@
+{
+    "collectionName": "components_youtube_crecimiento_canals",
+    "info": {
+        "displayName": "CrecimientoCanal",
+        "icon": "youtube",
+        "description": "Métricas específicas de crecimiento para un canal de YouTube en un caso de éxito"
+    },
+    "options": {},
+    "attributes": {
+        "nombreOpcional": {
+            "type": "string",
+            "description": "Nombre a mostrar (Opcional, si se deja en blanco se usará el de la API)"
+        },
+        "youtubeChannelId": {
+            "type": "string",
+            "required": true,
+            "description": "El ID del canal de YouTube (Ej: UCa_V_xxx)"
+        },
+        "suscriptoresAntes": {
+            "type": "biginteger",
+            "description": "Cuántos suscriptores tenía la cuenta cuando GenLatam tomó la campaña (Línea base). Si se deja vacío, la tarjeta no mostrará el antes/después, solo las métricas actuales vivas."
+        }
+    }
+}

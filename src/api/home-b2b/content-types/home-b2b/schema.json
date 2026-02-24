@@ -1,0 +1,101 @@
+{
+    "kind": "singleType",
+    "collectionName": "home_b2bs",
+    "info": {
+        "singularName": "home-b2b",
+        "pluralName": "home-b2bs",
+        "displayName": "2. 💻 Página: Inicio",
+        "description": "Contenido de la landing page principal corporativa"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "fondoHome": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ],
+            "description": "Imagen PNG que servirá como textura/logo de marca de agua en el fondo del Hero."
+        },
+        "colorFondoHome": {
+            "type": "customField",
+            "customField": "plugin::color-picker.color",
+            "default": "#000000",
+            "description": "Color sólido de fondo. Usa un color oscuro (ej. negro o azul corporativo)."
+        },
+        "heroTitulo": {
+            "type": "string",
+            "required": true,
+            "default": "Movilización Digital que Gana Elecciones",
+            "description": "El título gigante principal de la página."
+        },
+        "heroSubtitulo": {
+            "type": "text",
+            "required": true,
+            "description": "El párrafo descriptivo debajo del título principal."
+        },
+        "heroCtaTexto": {
+            "type": "string",
+            "required": true,
+            "default": "Agendar Consultoría",
+            "description": "El texto del botón rojo principal (Call to Action)."
+        },
+        "heroCtaUrl": {
+            "type": "string",
+            "required": true,
+            "default": "/contacto",
+            "description": "Hacia dónde lleva el botón (ej. /contacto)."
+        },
+        "metricasDestacadas": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.metrica",
+            "description": "Los 4 números grandes que flotan al lado del texto."
+        },
+        "etiquetaSeccionMedios": {
+            "type": "string",
+            "default": "Network Oficial",
+            "description": "La pequeña etiqueta roja encima de Nuestros Medios."
+        },
+        "tituloSeccionMedios": {
+            "type": "string",
+            "default": "Ecosistema de Influencia Propio",
+            "description": "El título de la sección de los canales como Guarimba Digital."
+        },
+        "parrafoSeccionMedios": {
+            "type": "text",
+            "default": "No solo asesoramos; construimos y operamos algunas de las comunidades políticas más ruidosas de Latam.",
+            "description": "El párrafo descriptivo de la sección de medios."
+        },
+        "textoBotonGuarimba": {
+            "type": "string",
+            "default": "Ver Plataforma",
+            "description": "Texto del botón que lleva hacia Guarimba Digital."
+        },
+        "urlBotonGuarimba": {
+            "type": "string",
+            "default": "/guarimba",
+            "description": "URL destino del botón de Guarimba."
+        },
+        "textoLinkExit": {
+            "type": "string",
+            "default": "Caso de Estudio Próximamente",
+            "description": "Texto del enlace debajo de la campaña EXIT."
+        },
+        "urlLinkExit": {
+            "type": "string",
+            "default": "#",
+            "description": "URL destino del enlace de EXIT (ej. un caso de estudio o # si está deshabilitado)."
+        },
+        "capacidades": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.servicio-destacado",
+            "description": "Añade aquí los servicios o capacidades que quieres que aparezcan (con sus íconos)."
+        }
+    }
+}

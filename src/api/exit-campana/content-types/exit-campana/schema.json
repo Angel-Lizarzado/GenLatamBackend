@@ -1,0 +1,76 @@
+{
+    "kind": "singleType",
+    "collectionName": "exit_campanas",
+    "info": {
+        "singularName": "exit-campana",
+        "pluralName": "exit-campanas",
+        "displayName": "5. 🎙️ Espacio: EXIT",
+        "description": "Contenido para la sección de entrevistas y podcast de EXIT"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "tituloPrincipal": {
+            "type": "string",
+            "required": true,
+            "default": "EXIT: Entrevistas a Fondo",
+            "description": "Título principal de la página del podcast"
+        },
+        "badgeTexto": {
+            "type": "string",
+            "default": "PODCAST ORIGINAL",
+            "description": "Texto de la etiqueta superior (ej. PODCAST ORIGINAL)"
+        },
+        "badgeIcono": {
+            "type": "enumeration",
+            "enum": [
+                "Headphones",
+                "Mic",
+                "Radio",
+                "Star",
+                "PlayCircle",
+                "Zap"
+            ],
+            "default": "Headphones",
+            "description": "Icono de Lucide-React a usar"
+        },
+        "descripcion": {
+            "type": "richtext",
+            "required": true,
+            "description": "Descripción general de la campaña o de la temporada actual"
+        },
+        "youtubeChannelId": {
+            "type": "string",
+            "required": true,
+            "description": "El ID del canal de YouTube de la anfitriona (necesario para fetch de los últimos episodios)"
+        },
+        "redesSociales": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.enlace-social",
+            "description": "Enlaces a Spotify, Apple Podcasts, etc."
+        },
+        "anfitrion": {
+            "type": "component",
+            "repeatable": false,
+            "component": "shared.perfil-presentador",
+            "description": "Información del host o presentador del podcast"
+        },
+        "logo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "invitadoEspecial": {
+            "type": "component",
+            "repeatable": false,
+            "component": "shared.perfil-presentador",
+            "description": "Información sobre el invitado especial del episodio"
+        }
+    }
+}

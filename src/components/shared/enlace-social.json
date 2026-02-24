@@ -1,0 +1,28 @@
+{
+    "collectionName": "components_shared_enlace_socials",
+    "info": {
+        "displayName": "EnlaceSocial",
+        "icon": "link",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "plataforma": {
+            "type": "enumeration",
+            "enum": [
+                "YouTube",
+                "X",
+                "Instagram",
+                "LinkedIn",
+                "TikTok",
+                "Telegram",
+                "WhatsApp"
+            ],
+            "required": true
+        },
+        "url": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

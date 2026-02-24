@@ -1,0 +1,57 @@
+{
+    "kind": "singleType",
+    "collectionName": "configuracion_globals",
+    "info": {
+        "singularName": "configuracion-global",
+        "pluralName": "configuracion-globals",
+        "displayName": "1. ⚙️ Config. Global",
+        "description": "Configuración global de GenLatam"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "emailContactoB2B": {
+            "type": "email"
+        },
+        "telefonoB2B": {
+            "type": "string"
+        },
+        "linkSoporteComunidad": {
+            "type": "string"
+        },
+        "canalYoutubePrincipal": {
+            "type": "string"
+        },
+        "redesCorporativas": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.enlace-social"
+        },
+        "redesComunidad": {
+            "type": "component",
+            "repeatable": true,
+            "component": "shared.enlace-social"
+        },
+        "bannerActivo": {
+            "type": "boolean",
+            "default": false
+        },
+        "bannerTexto": {
+            "type": "string"
+        },
+        "textoFooter": {
+            "type": "string",
+            "default": "Consultoría estratégica y posicionamiento corporativo de alto nivel."
+        },
+        "logo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        }
+    }
+}

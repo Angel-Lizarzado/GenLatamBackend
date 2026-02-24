@@ -1,0 +1,19 @@
+{
+    "collectionName": "components_shared_metricas",
+    "info": {
+        "displayName": "Metrica",
+        "icon": "chart-pie",
+        "description": "Una métrica estadística para presumir en el B2B"
+    },
+    "options": {},
+    "attributes": {
+        "valor": {
+            "type": "string",
+            "required": true
+        },
+        "etiqueta": {
+            "type": "string",
+            "required": true
+        }
+    }
+}
